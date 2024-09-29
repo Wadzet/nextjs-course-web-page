@@ -12,19 +12,19 @@ const PricingToggle: React.FC<{ onToggle: (toggleState: boolean) => void }> = ({
     return (
         <section className="flex justify-center items-center py-8">
             <div className="flex items-center space-x-4">
-                <span className="text-toggle-text-color text-lg">Annually</span>
+                <span className="text-toggle-color text-lg">Annually</span>
                 <label className="relative inline-flex items-center cursor-pointer">
-                    <input type="checkbox" checked={isMonthly} onChange={handleChange} className="sr-only" />
+                    <input type="checkbox" checked={isMonthly} onChange={handleChange} className="sr-only peer" />
                     <div
-                        className={`w-[60px] h-[30px] bg-gradient-to-r from-toggle-off-gradient-start to-toggle-off-gradient-end rounded-full peer peer-checked:from-toggle-on-gradient-start peer-checked:to-toggle-on-gradient-end`}
+                        className={`w-[60px] h-[30px] rounded-full bg-gradient-to-r from-toggle-off-start to-toggle-off-end transition-all duration-300 peer-checked:from-toggle-on-start peer-checked:to-toggle-on-end`}
                     >
                     </div>
                     <span
-                        className={`absolute left-[2px] top-[2px] w-[26px] h-[26px] bg-white-color rounded-full transition-transform duration-400 ${isMonthly ? 'transform translate-x-[30px]' : ''}`}
+                        className={`absolute left-0.5 top-0.5 h-[26px] aspect-square bg-white rounded-full transition-transform duration-400 ${isMonthly ? 'transform translate-x-[30px]' : ''}`}
                     >
                     </span>
                 </label>
-                <span className="text-toggle-text-color text-lg">Monthly</span>
+                <span className="text-toggle-color text-lg">Monthly</span>
             </div>
         </section>
     );
