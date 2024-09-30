@@ -16,9 +16,9 @@ const PlanCard: React.FC<PlanCardProps> = ({ title, price, storage, users, sendL
                 highlight
                     ? 'h-[500px] py-14 bg-gradient-to-b from-plan-start to-plan-end text-white-color'
                     : 'bg-plan-bg-color text-text-color'
-            } h-[450px] w-[350px] p-8 plan-shadow rounded-lg flex flex-col`}
+            } h-[450px] w-[350px] sm:w-[500px] md:w-[750px] lg:w-[350px] p-8 plan-shadow rounded-lg flex flex-col`}
         >
-            <h3 className="text-2xl font-bold">{title}</h3>
+            <h3 className="text-2xl font-bold pt-2">{title}</h3>
             <p className="text-7xl py-5 font-bold flex items-center justify-center">
                 <span className="text-[40px] mr-2">$</span>{price}
             </p>
@@ -28,9 +28,9 @@ const PlanCard: React.FC<PlanCardProps> = ({ title, price, storage, users, sendL
                 <p className="py-3.5 border-y">{sendLimit}</p>
             </div>
             <button
-                className={`my-7 p-8 w-full py-3 text-sm font-bold uppercase tracking-wide rounded-md transition-all duration-500 ${
+                className={`my-7 w-full py-3 text-sm font-bold uppercase tracking-wide rounded-md transition-all duration-500 ${
                     highlight
-                        ? 'bg-transparent text-white-color border border-white-color hover:bg-white hover:text-plan-hover-color hover:border-plan-hover-color'
+                        ? 'bg-white text-plan-hover-color border border-white-color hover:bg-transparent hover:text-white-color'
                         : 'bg-gradient-to-r from-plan-start to-plan-end text-white-color border border-white hover:text-plan-hover-color hover:border-plan-hover-color hover:bg-gradient-to-l hover:from-white hover:to-white'
                 }`}
             >
