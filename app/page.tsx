@@ -6,7 +6,6 @@ import PricingPlans from './components/PricingPlans';
 import Image from 'next/image';
 import BgLeft from './public/bg-left.svg';
 import BgRight from './public/bg-right.svg';
-import Head from 'next/head';
 
 const Page: React.FC = () => {
     const [isMonthly, setIsMonthly] = useState(false);
@@ -16,12 +15,7 @@ const Page: React.FC = () => {
     };
 
     return (
-        <>
-            <Head>
-                <link rel="icon" href="icon.png" type="image/<generated>" sizes="<generated>"/>
-            </Head>
-            <div
-                className="flex justify-center items-center flex-col bg-main-color text-text-color font-montserrat font-bold lg:h-screen h-full w-full overflow-x-hidden relative">
+            <div className="flex justify-center items-center flex-col bg-main-color text-text-color font-montserrat font-bold lg:h-screen h-full w-full overflow-x-hidden relative">
                 <Header />
                 <main className="w-full flex flex-col justify-center items-center relative z-20">
                     <PricingToggle onToggle={handleToggle} />
@@ -30,7 +24,6 @@ const Page: React.FC = () => {
                 <Image src={BgLeft} alt="Left background element" className="absolute bottom-0 left-0 w-1/4 z-10" />
                 <Image src={BgRight} alt="Right background element" className="absolute top-0 right-0 w-1/4 z-10" />
             </div>
-        </>
     );
 };
 
